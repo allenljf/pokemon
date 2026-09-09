@@ -68,9 +68,7 @@ fun PokemonNavHost(
                 val now = SystemClock.elapsedRealtime()
                 if (now - lastPokemonNavigationAt >= DETAIL_NAVIGATION_THROTTLE_MS) {
                     lastPokemonNavigationAt = now
-                    navController.navigate(NavigationRoute.Detail.createRoute(pokemonId)) {
-                        launchSingleTop = true
-                    }
+                    navController.navigateToPokemonDetail(pokemonId)
                 }
             }
             detailContent?.invoke(navigateBack) ?: DetailScreen(
@@ -80,6 +78,10 @@ fun PokemonNavHost(
             )
         }
     }
+}
+
+internal fun NavHostController.navigateToPokemonDetail(pokemonId: Int) {
+    navigate(NavigationRoute.Detail.createRoute(pokemonId))
 }
 
 private const val DETAIL_NAVIGATION_THROTTLE_MS = 500L
