@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pokémon</string>
+    <string name="my_pocket">My Pocket</string>
+    <string name="syncing_pokemon">Syncing Pokémon</string>
+    <string name="no_pokemon_captured">No Pokemon captured yet</string>
+    <string name="types">Types</string>
+    <string name="description">Description</string>
+    <string name="evolves_from">Evolves from</string>
+    <string name="back">Back</string>
+    <string name="capture">Capture</string>
+    <string name="release">Release</string>
+</resources>
